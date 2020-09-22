@@ -1,6 +1,22 @@
 package com.shiven.interview.questions.ds.LinkedList;
 
+//        Given a singly linked list of sorted numbers, write a function that takes head of the linked list as input and removes all duplicates from the list. After removing the duplicates in-place return the new length of the list.
+//        Space complexity of the program should be O(1).
+//        Write all supporting classes and methods to create a LinkedList and insert elements into the list.
+//
+//        Example 1:
+//        Input: [2, 3, 3, 3, 6, 9, 9]
+//        Output: 4
+//        Explanation: The first four elements after removing the duplicates will be [2, 3, 6, 9]. This should be the state of the list after function completes.
+//
+//        Example 2:
+//        Input: [2, 2, 2, 11]
+//        Output: 2
+//        Explanation: The first two elements after removing the duplicates will be [2, 11]. This should be the state of the list after function completes.
+
 public class LinkedListWithRepititions {
+
+
 
     Node head;
 
