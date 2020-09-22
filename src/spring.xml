@@ -1,0 +1,94 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	
+	
+<!-- 	<bean id="triangle"
+		class="com.shiven.interview.spring.beanfactory.Triangle">
+		<constructor-arg value="Equilateral"></constructor-arg>
+	</bean>
+
+	<bean id="triangleDi"
+		class="com.shiven.interview.spring.dependencyinjection.Triangle">
+		<property name="point1" ref="point1" />
+		<property name="point2">
+			<bean
+				class="com.shiven.interview.spring.dependencyinjection.Point" />
+		</property>
+	</bean>
+
+	<bean id="point1"
+		class="com.shiven.interview.spring.dependencyinjection.Point"
+		name="point1">
+		<property name="x" value="20" />
+		<property name="y" value="30" />
+	</bean>
+
+	<bean id="triangleCallBack"
+		class="com.shiven.interview.spring.lifecyclecallbacks.Triangle">
+		<property name="point1" ref="point1CallBack" />
+		<property name="point2">
+			<bean
+				class="com.shiven.interview.spring.lifecyclecallbacks.Point" />
+		</property>
+	</bean>
+
+	<bean id="point1CallBack"
+		class="com.shiven.interview.spring.lifecyclecallbacks.Point">
+		<property name="x" value="20" />
+		<property name="y" value="30" />
+	</bean>
+
+	<bean id="beanPostProcessor"
+		class="com.shiven.interview.spring.lifecyclecallbacks.DisplayNameBeanPostProcessor" />
+
+ -->
+	<!-- these beans are for autowiring practice -->
+	<!-- 
+	<bean id="triangleAuto"
+		class="com.shiven.interview.spring.autowiring.Triangle">
+		<property name="pointAuto1" ref="pointAuto1"></property>
+		<property name="pointAuto2" ref="pointAuto2"></property>
+	</bean>
+
+	<bean id="pointAuto1"
+		class="com.shiven.interview.spring.autowiring.Point">
+		<property name="x" value="21.1"></property>
+		<property name="y" value="31.1"></property>
+	</bean>
+
+	<bean id="pointAuto2"
+		class="com.shiven.interview.spring.autowiring.Point">
+		<property name="x" value="21.1"></property>
+		<property name="y" value="31.1"></property>
+	</bean>
+	
+	<bean id="triangleAutoConstructor" class="com.shiven.interview.spring.autowiring.Triangle">
+		<constructor-arg name="point1" ref="pointAuto1" />
+		<constructor-arg name="point2" ref="pointAuto2" />
+	</bean>
+
+ -->
+ 	<context:annotation-config />
+ 	
+ 	<bean id="triangleAuto" class="com.shiven.interview.spring.autowiring.Triangle" />
+ 	
+ 	<bean id="pointAuto1"
+		class="com.shiven.interview.spring.autowiring.Point" >
+		<property name="x" value="21.1"></property>
+		<property name="y" value="31.1"></property>
+	</bean>
+
+	<bean id="pointAuto2"
+		class="com.shiven.interview.spring.autowiring.Point">
+		<property name="x" value="22.3"></property>
+		<property name="y" value="32.2"></property>
+	</bean>
+	
+ 	<bean id="triangleAutoConstructor" class="com.shiven.interview.spring.autowiring.Triangle" />
+		
+ 
+</beans>
